@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarav | Premium Developer & Shopify Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        :root { --gold: #d4af37; --dark-bg: #050505; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--dark-bg); color: #ffffff; scroll-behavior: smooth; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gold-gradient { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass py-5 px-8 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-extrabold tracking-tighter flex items-center gap-2">
+                <div class="w-8 h-8 bg-yellow-600 rounded-lg flex items-center justify-center text-black">A</div>
+                <span>AARAV<span class="text-yellow-500">.</span></span>
+            </div>
+            <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
+                <a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <a href="https://wa.me/9779800000000" class="text-[10px] font-bold uppercase tracking-widest border border-white/20 px-6 py-2.5 rounded-full hover:bg-white hover:text-black transition-all">HIRE ME</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 text-center px-6">
+        <div class="max-w-5xl">
+            <p class="text-yellow-500 text-[10px] uppercase tracking-[0.4em] mb-8 font-bold">Based in Nepal • Serving Globally</p>
+            <h1 class="text-6xl md:text-9xl serif mb-8 leading-[0.9]">High-End <br><span class="gold-gradient italic font-normal">Solutions.</span></h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light">I build luxury Shopify stores and custom Python automation for modern brands.</p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#portfolio" class="bg-yellow-600 text-black px-12 py-5 rounded-2xl text-xs font-black uppercase tracking-widest hover:scale-105 transition-all">Explore Projects</a>
+                <a href="#contact" class="glass px-12 py-5 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-white/5">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="expertise" class="py-32 px-6 max-w-7xl mx-auto">
+        <h3 class="text-4xl serif mb-16 text-center">My Expertise</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass p-12 rounded-[40px] hover:border-yellow-500/20 transition-all">
+                <i data-lucide="gem" class="w-10 h-10 text-yellow-600 mb-8"></i>
+                <h4 class="text-2xl font-bold mb-4">Shopify Expert</h4>
+                <p class="text-gray-400 text-sm
