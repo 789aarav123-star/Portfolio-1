@@ -3,96 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarav | Web Developer for Growing Businesses</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Aarav | Web Solutions & Shopify for Small Business</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
             color: #1f2937;
-            scroll-behavior: smooth;
+            line-height: 1.6;
         }
 
-        .hero-gradient {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        .bg-gradient-soft {
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
         }
 
-        .btn-blue {
-            background-color: #2563eb;
-            transition: all 0.3s ease;
-        }
-
-        .btn-blue:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-1px);
-        }
-
-        .card-shadow {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        .brand-blue { color: #2563eb; }
+        .bg-brand-blue { background-color: #2563eb; }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid #e5e7eb;
         }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            border-color: #2563eb;
+        }
+
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+        }
+
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body>
+<body class="bg-white">
 
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 py-4 px-6 border-b border-gray-100">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold text-blue-600 tracking-tight">AARAV<span class="text-gray-900 uppercase text-sm ml-1">Web Studio</span></div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
-                <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
-                <a href="#work" class="hover:text-blue-600 transition-colors">Work</a>
+    <nav class="fixed top-0 w-full z-50 nav-glass border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 bg-brand-blue rounded-lg flex items-center justify-center">
+                    <i data-lucide="layout" class="text-white w-5 h-5"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight">AARAV<span class="brand-blue">.</span></span>
             </div>
-            <a href="#contact" class="bg-blue-600 text-white px-5 py-2.5 text-sm font-semibold rounded-lg btn-blue">Start Your Project</a>
+            
+            <div class="hidden md:flex gap-10 text-sm font-semibold text-gray-500">
+                <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
+                <a href="#work" class="hover:text-blue-600 transition-colors">Portfolio</a>
+                <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+
+            <a href="https://wa.me/9779800000000" class="bg-brand-blue text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-blue-500/20 hover:opacity-90 transition-all">
+                Let's Talk
+            </a>
         </div>
     </nav>
 
-    <section id="home" class="hero-gradient pt-40 pb-24 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <span class="text-blue-600 font-bold text-sm tracking-wider uppercase mb-4 block">Helping Small Businesses Scale</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-                I Build Websites That <span class="text-blue-600">Grow Your Business.</span>
+    <section class="pt-40 pb-20 px-6 bg-gradient-soft">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight mb-8">
+                Helping Small Businesses <br>
+                <span class="brand-blue">Win Online.</span>
             </h1>
-            <p class="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                Clean, fast, and modern web solutions designed to turn your visitors into customers. Specializing in Shopify and Custom Web Design.
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto font-medium">
+                I build professional websites and Shopify stores that help local businesses attract more customers and grow their revenue.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#work" class="bg-gray-900 text-white px-8 py-4 rounded-lg font-bold">View Recent Work</a>
-                <a href="#contact" class="bg-white text-gray-900 border border-gray-200 px-8 py-4 rounded-lg font-bold hover:bg-gray-50 transition-all">Free Consultation</a>
+                <a href="#work" class="bg-gray-900 text-white px-10 py-4 rounded-3xl font-bold text-lg hover:bg-gray-800 transition-all">See My Work</a>
+                <a href="#services" class="bg-white text-gray-700 border-2 border-gray-100 px-10 py-4 rounded-xl font-bold text-lg hover:border-blue-600 transition-all">My Services</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 px-6 bg-white">
+    <section id="services" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-blue-600 font-bold text-sm uppercase mb-3">Solutions</h2>
-                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">How I Can Help You</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">My Expertise</h2>
+                    <h3 class="text-4xl font-extrabold text-gray-900">High-impact solutions for growth.</h3>
+                </div>
+                <p class="text-gray-500 text-lg">Whether you're starting from scratch or upgrading an existing site, I handle the technical details so you can focus on your business.</p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl card-shadow bg-white hover:border-blue-200 transition-all">
-                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="shopping-bag" class="text-blue-600"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4">Shopify Setup</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Everything you need to start selling online. I set up your store, configure payments, and design your product pages for success.</p>
+                <div class="p-10 rounded-3xl card-hover bg-white">
+                    <i data-lucide="shopping-cart" class="text-blue-600 w-10 h-10 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Shopify Stores</h4>
+                    <p class="text-gray-500 text-sm">Professional e-commerce setups designed to convert visitors into loyal customers.</p>
                 </div>
-                <div class="p-8 rounded-2xl card-shadow bg-white hover:border-blue-200 transition-all">
-                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="monitor" class="text-blue-600"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4">Business Websites</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Modern, mobile-friendly websites for service-based businesses. Fast loading speeds and easy for your customers to use.</p>
+                <div class="p-10 rounded-3xl card-hover bg-white">
+                    <i data-lucide="smartphone" class="text-blue-600 w-10 h-10 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Responsive Design</h4>
+                    <p class="text-gray-500 text-sm">Websites that look perfect on iPhones, tablets, and desktops alike.</p>
                 </div>
-                <div class="p-8 rounded-2xl card-shadow bg-white hover:border-blue-200 transition-all">
-                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="wrench" class="text-blue-600"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4">Maintenance</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Focus on your business while I handle the tech. I provide regular updates, speed fixes, and support for your existing site.</p>
+                <div class="p-10 rounded-3xl card-hover bg-white">
+                    <i data-lucide="gauge" class="text-blue-600 w-10 h-10 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Speed & SEO</h4>
+                    <p class="text-gray-500 text-sm">Fast-loading sites built to rank higher on Google search results.</p>
                 </div>
             </div>
         </div>
@@ -100,65 +112,45 @@
 
     <section id="work" class="py-24 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <div class="mb-16">
-                <h2 class="text-blue-600 font-bold text-sm uppercase mb-3 text-center">Success Stories</h2>
-                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 text-center">My Recent Projects</h3>
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-extrabold">Recent Projects(Drafts)</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-white rounded-2xl overflow-hidden card-shadow group">
-                    <div class="h-64 bg-gray-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 group">
+                    <div class="h-64 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-2 text-gray-900">Horologix Watch Store</h4>
-                        <p class="text-gray-600 mb-6 text-sm">A full Shopify setup for a local retailer, increasing their monthly sales by 40%.</p>
-                        <div class="flex gap-2">
-                            <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Shopify</span>
-                            <span class="bg-green-50 text-green-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">E-commerce</span>
-                        </div>
+                        <h4 class="text-2xl font-bold mb-3">Horologix Watches</h4>
+                        <p class="text-gray-500 mb-6">Custom Shopify store for a premium watch retailer, optimized for mobile sales.</p>
+                        <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase">E-Commerce</span>
                     </div>
                 </div>
-                <div class="bg-white rounded-2xl overflow-hidden card-shadow group">
-                    <div class="h-64 bg-gray-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 group">
+                    <div class="h-64 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-2 text-gray-900">Consultancy Landing Page</h4>
-                        <p class="text-gray-600 mb-6 text-sm">A fast-loading business website designed to capture leads and showcase services professionally.</p>
-                        <div class="flex gap-2">
-                            <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Custom Code</span>
-                            <span class="bg-gray-50 text-gray-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Landing Page</span>
-                        </div>
+                        <h4 class="text-2xl font-bold mb-3">Modern Corporate</h4>
+                        <p class="text-gray-500 mb-6">A clean, professional landing page for a local service-based business.</p>
+                        <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase">Web Design</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-4xl font-extrabold text-gray-900 mb-6">Let's Build Something Together</h3>
-            <p class="text-gray-600 mb-10 text-lg">Ready to grow your online presence? I'm available for new projects and consultations.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12">
-                <div class="p-6 bg-blue-50 rounded-xl flex items-center gap-5">
-                    <i data-lucide="mail" class="text-blue-600"></i>
-                    <div>
-                        <p class="text-xs text-gray-500 font-bold uppercase">Email</p>
-                        <p class="font-bold">aarav@example.com</p>
-                    </div>
-                </div>
-                <div class="p-6 bg-green-50 rounded-xl flex items-center gap-5">
-                    <i data-lucide="message-circle" class="text-green-600"></i>
-                    <div>
-                        <p class="text-xs text-gray-500 font-bold uppercase">WhatsApp</p>
-                        <p class="font-bold">+977 98XXXXXXXX</p>
-                    </div>
-                </div>
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-3xl mx-auto bg-gray-900 rounded-[40px] p-12 md:p-20 text-center text-white shadow-2xl">
+            <h3 class="text-3xl md:text-5xl font-extrabold mb-8">Ready to grow?</h3>
+            <p class="text-gray-400 text-lg mb-12">I am currently available for new projects. Let's build something great for your business.</p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="mailto:789aarav123@gmail.com" class="text-xl font-bold hover:text-blue-400 transition-colors underline">789aarav123@gmail.com</a>
+                <span class="hidden md:block text-gray-700">|</span>
+                <a href="https://wa.me/9779807732560" class="text-xl font-bold hover:text-green-400 transition-colors">+977 9807732560</a>
             </div>
-            
-            <p class="text-gray-400 text-xs uppercase tracking-widest mt-12">© 2026 Aarav | Web Solutions for Small Businesses</p>
         </div>
+        <p class="text-center mt-16 text-gray-400 text-sm font-medium uppercase tracking-[0.3em]">© 2026 Aarav | Professional Web Solutions</p>
     </section>
 
     <script>
